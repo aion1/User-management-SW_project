@@ -1,0 +1,11 @@
+version: '2'
+services:
+  website:
+    container_name: php72
+    image: tut:php_img
+    build:
+      context: ./
+    volumes:
+      - /Development/PetProjects/DockerPHPTutorial/src:/var/www/html/
+    ports:
+      - 8000:8080
